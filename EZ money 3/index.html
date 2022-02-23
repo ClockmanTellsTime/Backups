@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body id="body" onload="main()">
+
+        <div class="stats">
+            <label class="moneyDisplay" id="moneyDisplay">Money: $0</label>
+        </div>
+        <div class="menus"> 
+            <div class="menu" id="menu">
+                <div class="menu_title">Menu</div>
+                <br>
+                <br>
+                <button class="toggle_menu" id="toggle" onclick="toggle()">MENU</button>
+                <div class="upgrade_amount_menu">
+                    Upgrade amount:
+                    <select id="upgrade_amount">
+                        <option value=1>1</option>
+                        <option value=10>10</option>
+                        <option value=50>50</option>
+                        <option value=100>100</option>
+                    </select>
+                </div>
+                <button class="menu_options" id="manager" onclick="toggle_manager()">Managers</button>
+                <button class="menu_options" id="upgrade" onclick="toggle_upgrades()"" >Upgrades</button>
+            </div>
+    
+            <div class="managers" id="managers">
+                <div class="menu_title">Managers</div>
+                <button class="exit" onclick="toggle_manager()">X</button>
+            </div>
+            <div class="upgrades" id="upgrades" ">
+                <div class="menu_title">Upgrades</div>
+                <button class="exit" onclick="toggle_upgrades()">X</button>
+            </div>
+                
+
+            <div class="prestiges" id="prestiges"></div>
+    
+        </div>
+
+        <br>
+        <div class="sets" id="sets"></div>
+        <br>
+
+        <div class="alert" id="alert">
+            <div class="menu_title" id="alert_title">Achivement</div><br>
+            <button class="exit1" id="alert_button" onclick="hide_alert()">X</button>
+            <label class="words" id="words"></label>
+        </div>
+        
+    </body>
+</html>
+
+
+
