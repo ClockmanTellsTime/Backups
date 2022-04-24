@@ -5,8 +5,6 @@ var clones = 0
 
 var data = {}
 
-var foorLoopVars = {}
-
 function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
@@ -15,17 +13,10 @@ function sleep(milliseconds) {
     } while (currentDate - date < milliseconds);
 }
 
-function forLoop(callback=function(){},loops=1,variable="i",after = function(){},delay = 0) {
-    foorLoopVars[variable] = {
-        count: 0,
-    }
+function forLoop(callback=function(){},loops=1,after = function(){},delay = 0) {
     for (var i = 0; i < loops; i++) {
-        foorLoopVars[variable] = i
         callback()
         sleep(delay)
-    }
-    foorLoopVars[variable] = {
-        count: 0,
     }
     after()
 }
